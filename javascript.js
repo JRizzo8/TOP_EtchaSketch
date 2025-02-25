@@ -30,18 +30,18 @@ function createDivs(){
             event.target.style.backgroundColor = "#" + randomColor();
         });
     }
-
-    document.body.appendChild(container);
 }
 
 // event listeners
 
 resetBtn.addEventListener("click", function(){
+    //resets grid and recreates with whatever value was last used for grid size
     removeDiv();
     createDivs();
 });
 
 promptBtn.addEventListener("click", function() {
+    //takes a user input and changes the grid size based on it
     userInput = prompt("enter a number between 1 and 100 please. (default is 16)");
     if (userInput <= 100 && userInput > 0){
         gridCount = userInput * userInput;
